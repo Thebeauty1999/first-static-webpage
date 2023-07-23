@@ -1,0 +1,42 @@
+#clock{
+  
+    position: relative;
+    margin-top: 200px;
+    margin-left: 400px;
+}
+#hour,#minutes,#seconds{
+    position: absolute;
+    background: black;
+    border:10px;
+
+}
+#hour{
+    height:90px;
+    width:10px;
+    bottom:206px;
+    left:197px;
+    transform-origin:bottom;
+    background: blueviolet;
+}
+
+#minutes{
+    height: 114px;
+    width: 8px;
+    bottom: 205px;
+    left: 192px;
+    transform-origin:bottom;
+    background: red;;
+
+   
+}
+#seconds{
+    height: 110px;
+    width: 5px;
+    bottom: 200px;
+    left: 197px;
+    transform-origin:bottom;
+    background: green;
+    
+
+
+}
