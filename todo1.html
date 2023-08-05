@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<style>
+
+    .h1{
+        color:darkgreen;
+        margin-left: 100px;
+        font-size: 50px;
+        text-align: center;
+    }
+    .button{
+        height:40px;
+        width:100px;
+        background-color:yellow;
+        font-size: 20px;
+        padding: 5px;
+        box-shadow: 1px 1px 1px 1px red;
+        text-align: center;
+        
+    }
+    #InputTask{
+        height:30px;
+        width:200px;
+        background-color:yellow;
+        font-size: 20px;
+        padding:5px;
+        margin-left: 650px;
+        box-shadow: 1px 1px 1px 1px red;
+        text-align: center;
+        
+
+    }
+    
+    </style>
+<body>
+    <h1 class="h1">ToDo List</h1>
+    <input type="text" placeholder="Enter your daily task" id="InputTask">&nbsp;
+    <button class="button" onclick="AddTask()">Add Task</button>
+    <ul id="list"></ul>
+    <script>
+        document.body.style.backgroundColor="lightpink"
+         const InputTask=document.getElementById("InputTask");
+         const list=document.getElementById("list");
+
+         function AddTask(){
+            if(InputTask.value===""){
+                alert("You must write something, it cant be left blank")
+            }
+            else{
+                let li=document.createElement("li");
+                li.innerHTML=InputTask.value;
+                list.appendChild(li)
+            }
+            InputTask.value=""
+         }
+    </script>
+</body>
+</html>
