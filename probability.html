@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+    <div id="main"><!---main div -->
+        <div id="box"><!--the box is the smaller div -->
+    <h1>Probability</h1><!--heading of the quiz-->
+    <span id="timer">10</span><!--used for timer -->
+    <span id="score">Score</span><!--used for updating the score-->
+    
+    <hr>
+    <h2 id="quesBox"></h2><!---this is where all the quiz will display-->
+    <br>
+    <div id="row"><!--rows for different options-->
+    <input type="radio" class="options" id="option1" value="a" name="options"/>
+    <label for="option1">Option1</label>
+</div><br>
+<div id="row"><!--rows for different options-->
+    <input type="radio" class="options" id="option2" value="b" name="options"/>
+    <label for="option2">Option2</label>
+</div><br>
+<div id="row"><!--rows for different options-->
+   <input type="radio" class="options" id="option3" value="c" name="options"/>
+    <label for="option3">Option3</label>
+</div><br>
+<div id="row"><!--rows for different options-->
+    <input type="radio" class="options"  id="option4" value="d" name="options"/>
+    <label for="option4">Option4</label><br>
+</div>
+<br>
+<button id="prev">Previous</button><!---used for previous button-->
+    <button id="submit" onclick="submitQuiz()">Submit</button><!--this button is used for submitting the quiz-->
+    <button id="next">Next</button><!--used for next button-->
+
+    
+</div><!---box div closed-->
+</div><!---main div closed-->
+<script src="probability.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<link rel="stylesheet" href="quizApp.css">
+<body>
+    <header id="main"><!--this is the header opening -->
+
+        <div id="tstbook_logo"><!---logo-->
+            <img src="logotstbk.jpeg" alt="TSTBook Logo">
+        </div>
+        
+    </header><!--header closed -->
+    <h1 id="user">Hello user!</h1>
+    <div id="welcom"><!--welcom div with input name field-->
+        <input class="input" type="text" id="nameInput" placeholder="Enter Your Name">
+        <label onclick="welcome()" id="label">Enter</label>
+        <h4 id="h4">You'll have 10 seconds to answer each question</h4>
+        <br>
+        <hr>
+    </div><!--welcome div closed-->
+
+    <h1 id="select">Select Category</h1>
+
+    <div id="category"><!--the category div-->
+        <div id="main-left"><!--categories div on the left-->
+            <a id="left" href="pipesandcisterns.html">Pipes And Cisterns</a><br><br><br><br>
+            <a id="left1" href="probonages.html">Problems On Ages</a><br>
+        </div><!--left category div closed-->
+
+        <div id="main-right"><!--categories div on the right-->
+            <a id="right" href="probability.html">Probability</a><br><br><br><br>
+            <a id="right1" href="p&l.html">Profit And Loss</a>
+        </div><!-- right category div closed-->
+
+    </div><!--category div closed-->
+    
+    </div>
+    <script>
+   function welcome() {//welcoming the user by entering their name and continuing the quiz 
+    var nameInput = document.getElementById("nameInput").value;
+    if (nameInput.trim() !== "") {
+        localStorage.setItem("userName", nameInput); // Storing the user's name in local storage
+      
+    } else {
+        alert("Please enter your name.");
+    }
+}
+
+
+    </script>
+</body>
+</html>
