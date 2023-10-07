@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <title>title</title>
+</head>
+<body>
+
+<h1>Password generation</h1>
+<input id="password" type="text" placeholder="generate password">
+<button onclick="createPassword()">Generate Password</button>
+<script>
+    let password=document.getElementById("password")
+    let length=12;
+
+    let upperCase="ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    let lowerCase="abcdefghijklmnopqrstuvwxyz";
+    let numbers="0123456789";
+    let symbols ="!@#$%&*()=+";
+
+    const allChars= upperCase+ lowerCase+symbols +numbers;
+
+    function createPassword(){
+       let newPassword="";
+
+         newPassword+=upperCase[Math.floor(Math.random()*upperCase.length)];
+         newPassword+=lowerCase[Math.floor(Math.random()*lowerCase.length)];
+         newPassword+=numbers[Math.floor(Math.random()*numbers.length)];
+         newPassword+=symbols[Math.floor(Math.random()*symbols.length)]
+    
+    while(newPassword.length>length){
+     newPassword+=allChars[Math.floor(Math.random()*allChars.length)]
+    
+    }
+    password.value=newPassword;
+
+    }
+
+
+        </script>
+</body>
+</html>
